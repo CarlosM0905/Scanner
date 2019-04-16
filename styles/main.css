@@ -98,7 +98,6 @@ textarea {
 	border: 0;
 	padding: 10px 5px;
     background: white no-repeat;
-	
     background-image: linear-gradient(to bottom, #3949AB, #3949ab),
                       linear-gradient(to bottom, silver, silver);
 	background-size: 0 2px, 100% 1px;
@@ -138,8 +137,9 @@ textarea:focus{
     box-shadow: 1px 1px 1px #ccc;
 }
 
+
 #textarea_code{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lucida Console', sans-serif;
     font-size: 15px;
     font-weight: 400;
 }
@@ -171,10 +171,15 @@ textarea:focus{
 .result_total{
     margin: 5px 5px;
     font-family: 'Raleway', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     display: block;
 }
+
+.result_num{
+    color: #3949AB;
+}
+
 
 .footer{
     background-color: #3949AB;

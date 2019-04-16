@@ -233,9 +233,6 @@ var Scanner = /** @class */ (function () {
 /* Codigo JavaScript */
 let textArea_txt;
 
-
-
-
 function getText() {
     textArea_txt = document.getElementById("textarea_code").value;
     updateCountsTextArea(textArea_txt);
@@ -249,46 +246,50 @@ function updateCountsTextArea() {
     var c_char = 0;
     var c_str = 0;
     var c_dt = 0;
-
+    var c_other = 0;
     var simbolo;
 
-    do{
+    do {
         simbolo = Scanner.obtenerSimbolo(textArea_txt);
-        if (simbolo != null){
-            switch(simbolo.getTipo()){
+        if (simbolo != null) {
+            switch (simbolo.getTipo()) {
                 case "Palabra Reservada":
-                c_kw++;
-                break;
+                    c_kw++;
+                    break;
 
                 case "Identificador":
-                c_id++;
-                break;
+                    c_id++;
+                    break;
 
                 case "Numero":
-                c_num++;
-                break;
+                    c_num++;
+                    break;
 
                 case "Operador Relacional":
                 case "Operador Logico":
                 case "Operador Aritmetico":
-                c_op++;
-                break;
+                    c_op++;
+                    break;
 
                 case "Caracter":
-                c_char++;
-                break;
+                    c_char++;
+                    break;
 
                 case "Cadena":
-                c_str++;
-                break;
+                    c_str++;
+                    break;
 
                 case "Tipo de Dato":
-                c_dt++;
-                break;
+                    c_dt++;
+                    break;
+
+                case "Otro":
+                    c_other++;
+                    break;
 
             }
         }
-    }while(simbolo != null);
+    } while (simbolo != null);
 
     document.getElementById("kw").innerHTML = c_kw;
     document.getElementById("op").innerHTML = c_op;
@@ -297,6 +298,7 @@ function updateCountsTextArea() {
     document.getElementById("id").innerHTML = c_id;
     document.getElementById("str").innerHTML = c_str;
     document.getElementById("dt").innerHTML = c_dt;
+    document.getElementById("other").innerHTML = c_other;
 
 
 }
@@ -304,21 +306,21 @@ function updateCountsTextArea() {
 function leerArchivo(e) {
     var archivo = e.target.files[0];
     if (!archivo) {
-      return;
+        return;
     }
     var lector = new FileReader();
-    lector.onload = function(e) {
-      var contenido = e.target.result;
-      document.getElementById("textarea_code").value = contenido;
+    lector.onload = function (e) {
+        var contenido = e.target.result;
+        document.getElementById("textarea_code").value = contenido;
     };
     var cadena = lector.readAsText(archivo);
-    
-  }
-  
-  function mostrarContenido(contenido) {
+
+}
+
+function mostrarContenido(contenido) {
     var elemento = document.getElementById('contenido-archivo');
     elemento.innerHTML = contenido;
-  }
-  
-  document.getElementById('file-input')
+}
+
+document.getElementById('file-input')
     .addEventListener('change', leerArchivo, false);
