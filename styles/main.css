@@ -66,6 +66,7 @@
 
 .format{
   font-style: italic;
+  color: #616A6B
 }
 
 .form_code{
@@ -113,14 +114,6 @@ textarea:focus{
     font-family: 'Lucida Console', sans-serif;
     font-size: 15px;
     font-weight: 400;
-}
-
-.result_total{
-    margin: 5px 5px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    display: block;
 }
 
 .result_num{
