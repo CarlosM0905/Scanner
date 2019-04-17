@@ -232,6 +232,53 @@ var Scanner = /** @class */ (function () {
 
 /* Codigo JavaScript */
 let textArea_txt;
+let simbolos;
+
+function showTable() {
+    let div1 = document.getElementById("tabla_resultados");
+
+    if (div1.hasChildNodes()) {
+        while (div1.childNodes.length >= 1) {
+            div1.removeChild(div1.firstChild);
+        }
+    }
+
+    let tabla = document.createElement("table");
+    let thead = document.createElement("thead");
+    let tbody = document.createElement("tbody");
+    let th1 = document.createElement("th");
+    let th2 = document.createElement('th');
+    let trh = document.createElement('tr');
+    th1.innerText = "Simbolo";
+    th2.innerText = "Tipo";
+    trh.appendChild(th1);
+    trh.appendChild(th2);
+
+
+    thead.appendChild(trh);
+    tabla.appendChild(thead);
+    tabla.appendChild(tbody);
+
+    Scanner.indice = 0;
+    let simbolo;
+
+    do {
+        simbolo = Scanner.obtenerSimbolo(textArea_txt);
+        if (simbolo != null) {
+            let trRow = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.innerText = simbolo.cadena;
+            let td2 = document.createElement("td");
+            td2.innerText = simbolo.tipo;
+            trRow.appendChild(td1);
+            trRow.appendChild(td2);
+            tbody.appendChild(trRow);
+        }
+    } while (simbolo != null);
+
+    div1.appendChild(tabla);
+}
+
 
 function getText() {
     textArea_txt = document.getElementById("textarea_code").value;

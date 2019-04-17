@@ -119,6 +119,36 @@ textarea:focus{
     font-weight: bold;
 }
 
+th{
+    width: 140px;
+    height: 40px;
+    border-color: #ccc;
+    border: 1px solid #aaa;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #3949AB;
+    color: #fff;
+}
+
+td{
+    width: 140px;
+    height: 40px;
+    border-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tabla_resultados{
+    width: 100%;
+    margin-bottom: 15px;
+}
+table{
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
 .footer{
     background-color: #3949AB;
     height: auto;
