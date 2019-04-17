@@ -238,19 +238,20 @@ function getText() {
     updateCountsTextArea(textArea_txt);
 }
 
-function updateCountsTextArea() {
-    var c_id = 0;
-    var c_op = 0;
-    var c_kw = 0;
-    var c_num = 0;
-    var c_char = 0;
-    var c_str = 0;
-    var c_dt = 0;
-    var c_other = 0;
-    var simbolo;
+function updateCountsTextArea(txt) {
+    let c_id = 0;
+    let c_op = 0;
+    let c_kw = 0;
+    let c_num = 0;
+    let c_char = 0;
+    let c_str = 0;
+    let c_dt = 0;
+    let c_other = 0;
+    Scanner.indice = 0;
+    let simbolo;
 
     do {
-        simbolo = Scanner.obtenerSimbolo(textArea_txt);
+        simbolo = Scanner.obtenerSimbolo(txt);
         if (simbolo != null) {
             switch (simbolo.getTipo()) {
                 case "Palabra Reservada":

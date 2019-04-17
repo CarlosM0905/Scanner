@@ -35,7 +35,7 @@
 }
 
 .gcontent{
-  width: 100%;
+    width: 100%;
 }
 
 .content{
@@ -65,13 +65,13 @@
 }
 
 .format{
-  font-style: italic;
-  color: #616A6B;
+    font-style: italic;
+    color: #616A6B;
 }
 
 .form_code{
     text-align: center;
-	  width: 50%;
+	width: 50%;
     margin: 0 auto;
 }
 
@@ -80,12 +80,12 @@ textarea {
 	width: 100%;
 	border: 0;
 	padding: 10px 5px;
-  background: white no-repeat;
-  background-image: linear-gradient(to bottom, #3949AB, #3949ab),
+    background: white no-repeat;
+    background-image: linear-gradient(to bottom, #3949AB, #3949ab),
                       linear-gradient(to bottom, silver, silver);
 	background-size: 0 2px, 100% 1px;
 	background-position: 50% 100%, 50% 100%;
-  transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 
 }
 
