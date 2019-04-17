@@ -34,60 +34,43 @@
     float: left;
 }
 
-.content{
-    width: 100%;
-    height: auto;
-    background-color:#fff;
+.gcontent{
+  width: 100%;
 }
 
-.note_content{
+.content{
     height: auto;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 3px #aaa;
     border-radius: 15px;
     margin: 20px 10px;
-    background-color: #fff;   
+    background-color: #fff;
+
 }
 
-.title_content{
-    height: auto;
-    margin: 5px 5px;
-}
-
-#title{
-        
+.title{
+    margin: 10px 10px 10px 15px;
+    line-height: 40px;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: 600;
-    line-height: 30px;
-    color: #222;
-}
-#text{
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 30px;
-    color: #444;
-    text-align: justify;
-}
-.text_content{
-    background-color: #fff;
-    height: auto;
-    margin: 5px 5px;
 }
 
-.input_content{
-    height: auto;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 3px #aaa;
-    border-radius: 15px;
-    margin: 20px 10px;
-    background-color: #fff;
-    text-align: center;
+.text{
+    margin: 10px 10px 10px 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+
+.format{
+  font-style: italic;
 }
 
 .form_code{
     text-align: center;
-	width: 50%;
+	  width: 50%;
     margin: 0 auto;
 }
 
@@ -97,13 +80,12 @@ textarea {
 	width: 100%;
 	border: 0;
 	padding: 10px 5px;
-    background: white no-repeat;
-    background-image: linear-gradient(to bottom, #3949AB, #3949ab),
+  background: white no-repeat;
+  background-image: linear-gradient(to bottom, #3949AB, #3949ab),
                       linear-gradient(to bottom, silver, silver);
 	background-size: 0 2px, 100% 1px;
 	background-position: 50% 100%, 50% 100%;
-
-    transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 
 }
 
@@ -113,20 +95,9 @@ textarea:focus{
 	outline: none;
 }
 
-.label_code{
-    height: auto;
-    margin: 5px 5px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 30px;
-    color: #444;
-    text-align: center
-}
-
 .btn_submit{
-    margin: 10px 5px;
-    padding: 10px 10px;
+    margin: 10px 10px;
+    padding: 10px 10px 10px 10px;
     background-color: #3949AB;
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
@@ -144,30 +115,6 @@ textarea:focus{
     font-weight: 400;
 }
 
-.result_content{
-    height: auto;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 3px #aaa;
-    border-radius: 15px;
-    margin: 20px 10px;
-    background-color: #fff;
-}
-
-.result_title{
-    margin: 5px 5px;
-    width: 120px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.results{
-    margin: 10px 10px;
-}
-
 .result_total{
     margin: 5px 5px;
     font-family: 'Raleway', sans-serif;
@@ -179,7 +126,6 @@ textarea:focus{
 .result_num{
     color: #3949AB;
 }
-
 
 .footer{
     background-color: #3949AB;

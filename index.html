@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="icon" type="image/png" href="img/icons8-scanner-24.png" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
     <title>Escaner</title>
 </head>
@@ -20,47 +21,42 @@
         </div>
     </header>
     <section>
-        <div class="content">
-            <div class="note_content">
-                <div class="title_content">
-                    <p id="title">
-                        Nota:
-                    </p>
-                </div>
-                <div class="text_content">
-                    <p id="text">
-                        Esta herramienta permite separar en simbolos cualquier codigo fuente escrito en el lenguaje de
-                        C++. Para su uso, ingresar el codigo en el textarea debajo o subir el codigo fuente (.txt .cpp).
+        <div class="gcontent">
+            <div class="content">
+                    <div class="title"><p>Nota:</p></div>
+                <div class="text">
+                    <p>
+                        Esta herramienta permite separar en símbolos cualquier código fuente escrito en el lenguaje de
+                        programación C++. Para su uso, ingresar el código en el TextArea debajo o seleccionar el código
+                        fuente (<label class = "format">.txt</label>  <label class = "format">.cpp</label>).
                     </p>
                 </div>
             </div>
             <div>
-                <div class="input_content">
+                <div class="content">
                     <form class="form_code">
-                        <label for="textarea_code" class="label_code">Ingrese el codigo aqui:</label>
+                        <label for="textarea_code" class="text">Ingrese el código aqui:</label>
                         <textarea name="textarea_code" id="textarea_code" cols="30" rows="10"
-                            placeholder="Escriba el código aquí"></textarea>
+                            placeholder="Escriba el código..."></textarea>
                         <button type="button" onclick="getText()" class="btn_submit">Escanear</button>
                         <input type="file" class="btn_submit" id="file-input">
                     </form>
                 </div>
-                <div class="result_content">
-                    <div class="result_title">
-                        <p>Resultados:</p>
-                    </div>
-                    <div class="results">
-                        <label class="result_total">Identificadores (x, num1, cadena3, resultado_Total, etc) :<span
+                <div class="content">
+                    <div class="title"><p>Resultados:</p></div>
+                    <div class="text">
+                        <label class="text">Identificadores (x, num1, cadena3, resultado_Total, etc) :<span
                                 id="id" class="result_num">0</span></label>
-                        <label class="result_total">Tipos de datos (int, double, float, boolean, etc) :<span
+                        <label class="text">Tipos de datos (int, double, float, boolean, etc) :<span
                                 id="dt" class="result_num">0</span></label>
-                        <label class="result_total">Palabras Clave(return, class, const, public, etc) :<span
+                        <label class="text">Palabras Clave(return, class, const, public, etc) :<span
                                 id="kw" class="result_num">0</span></label>
-                        <label class="result_total">Numeros(12, 3.14, etc) :<span id="num" class="result_num">0</span></label>
-                        <label class="result_total">Caracter ('a', 'z', etc) :<span id="char" class="result_num">0</span></label>
-                        <label class="result_total">Cadena ("Hola mundo", "Como estas", "Game over",etc) :<span
+                        <label class="text">Numeros(12, 3.14, etc) :<span id="num" class="result_num">0</span></label>
+                        <label class="text">Caracter ('a', 'z', etc) :<span id="char" class="result_num">0</span></label>
+                        <label class="text">Cadena ("Hola mundo", "Como estas", "Game over",etc) :<span
                                 id="str" class="result_num">0</span></label>
-                        <label class="result_total">Operadores (++, +=, +, - , %, etc) :<span id="op" class="result_num">0</span></label>
-                        <label class="result_total">Otros ([],{}, (), : , ; , etc) :<span id="other" class="result_num">0</span></label>
+                        <label class="text">Operadores (++, +=, +, - , %, etc) :<span id="op" class="result_num">0</span></label>
+                        <label class="text">Otros ([],{}, (), : , ; , etc) :<span id="other" class="result_num">0</span></label>
                     </div>
                 </div>
             </div>
