@@ -57,7 +57,7 @@
 }
 
 .text{
-    margin: 10px 10px 10px 15px;
+    margin: 10px 10px 15px 15px;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -75,7 +75,6 @@
     margin: 0 auto;
 }
 
-input,
 textarea {
 	display: block;
 	width: 100%;
@@ -90,14 +89,13 @@ textarea {
 
 }
 
-input:focus,
 textarea:focus{
 	background-size: 100% 2px, 100% 1px;
 	outline: none;
 }
 
 .btn_submit{
-    margin: 10px 10px;
+    margin: 0px 10px 15px 10px;
     padding: 10px 10px 10px 10px;
     background-color: #3949AB;
     font-family: 'Raleway', sans-serif;
