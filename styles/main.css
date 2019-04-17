@@ -66,7 +66,7 @@
 
 .format{
   font-style: italic;
-  color: #616A6B
+  color: #616A6B;
 }
 
 .form_code{
@@ -118,6 +118,7 @@ textarea:focus{
 
 .result_num{
     color: #3949AB;
+    font-weight: bold;
 }
 
 .footer{
