@@ -77,15 +77,19 @@ var Scanner = /** @class */ (function () {
                 this.indice += 2;
                 do {
                     this.indice++;
-                } while (cadena.charAt(this.indice) != '*' && cadena.charAt(this.indice) != '/');
+                } while (cadena.charAt(this.indice) != '*' && cadena.charAt(this.indice+1) != '/');
                 this.indice += 2;
+
+                return simbolo = new Simbolo("", "Comentario Multilinea");
             }
-            if (cadena.charAt(this.indice) == '/' && cadena.charAt(this.indice) == '/') {
+            if (cadena.charAt(this.indice) == '/' && cadena.charAt(this.indice+1) == '/') {
                 this.indice += 2;
                 do {
                     this.indice++;
                 } while (cadena.charAt(this.indice) != '\n');
                 this.indice += 1;
+
+                return simbolo = new Simbolo("", "Comentario Simple");
             }
             if (cadena.charAt(this.indice) >= 'a' && cadena.charAt(this.indice) <= 'z'
                 || cadena.charAt(this.indice) >= 'A' && cadena.charAt(this.indice) <= 'Z'
@@ -264,7 +268,7 @@ function showTable() {
 
     do {
         simbolo = Scanner.obtenerSimbolo(textArea_txt);
-        if (simbolo != null) {
+        if (simbolo != null && simbolo.getTipo() != "Comentario Simple" && simbolo.getTipo() != "Comentario Multilinea") {
             let trRow = document.createElement("tr");
             let td1 = document.createElement("td");
             td1.innerText = simbolo.cadena;
